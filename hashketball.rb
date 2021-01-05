@@ -162,6 +162,16 @@ def player_numbers(team_n)
   end
 end
 
+def player_stats (player_n)
+  game_hash.each_key do |ha|
+    game_hash[ha][:players].each_entry do |playerhash|
+      if playerhash[:player_name] == player_n
+        return playerhash
+      end
+    end
+  end
+end
+
 
 
 
